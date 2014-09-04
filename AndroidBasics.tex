@@ -1,0 +1,79 @@
+\documentclass[11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Sanyam, Vinay @EduTechLabs}
+\title{Android Basics}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+
+% selecting theme
+\usetheme{Warsaw}
+
+%%configure listings package for java
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8pt} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8pt}  % for normal
+
+%custom colours
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+%configuring listings package to highlight java syntax
+\newcommand\javastyle{\lstset{
+language=Java,
+%basicstyle=\ttm,
+otherkeywords={this},             % Add keywords here
+%keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{pred},    % Custom highlighting style
+%stringstyle=\color{deepgreen},
+commentstyle=\color{pgreen},
+keywordstyle=\ttb\color{pblue},
+stringstyle=\color{pred},
+basicstyle=\ttfamily,
+moredelim=[il][\textcolor{pgrey}]{$$}, %$$ %the double dollar to prevent texmaker from going crazy
+moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+%frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+% java environment
+\lstnewenvironment{java}[1][]
+{
+\javastyle
+\lstset{#1}
+}
+{}
+
+% java for external files
+\newcommand\javaexternal[2][]{{
+\javastyle
+\lstinputlisting[#1]{#2}}}
+
+% java for inline
+\newcommand\javainline[1]{{\javastyle\lstinline!#1!}}
+
+%%%%%%%%%%%% begin writing the actual document %%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+
+
+\end{document}
