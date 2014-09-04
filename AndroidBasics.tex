@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage{hyperref}
 
 \author{Sanyam, Vinay, Rahul, Akshay @EduTechLabs}
 \title{Android Basics}
@@ -24,11 +25,20 @@
 \DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8pt} % for bold
 \DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8pt}  % for normal
 
+
 %custom colours
 \definecolor{pblue}{rgb}{0.13,0.13,1}
 \definecolor{pgreen}{rgb}{0,0.5,0}
 \definecolor{pred}{rgb}{0.9,0,0}
 \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+%setting up hyperref
+\hypersetup{
+colorlinks = true,
+linkcolor = blue,
+urlcolor = blue
+}
+
 
 %configuring listings package to highlight java syntax
 \newcommand\javastyle{\lstset{
@@ -79,21 +89,31 @@ showstringspaces=false            %
 \section{What can be achieved with Android}
 
 \begin{frame}[containsverbatim]{What can you make with Android ?}
-- Almost anything,
-- people have made satellites from Android phones !! not kidding (here's the link)
-- coming back to more earthly things:
-- ftp server, http serve, barcode scanner, qr code reader, navigator 
-- of-course there is Whatsapp
 
+	\begin{flushleft}
+		\begin{itemize}			
+		\item Almost anything,
+		\item people have made satellites from Android phones !! not kidding (here's the \href{http://www.theverge.com/2013/5/3/4297718/nasa-phonesat-android-nexus-returns-images}{link})
+		\item coming back to more earthly things:
+		\item ftp server, http serve, barcode scanner, qr code reader, navigator 
+		\item of-course there is Whatsapp
+		\end{itemize}	
+	\end{flushleft}
+
+\huge Your imagination is the limit ! \\
+
+\normalsize Almost 
 \end{frame}
 
 
 \section{Installing the ADT bundle}
 
 \begin{frame}[containsverbatim]{What to download ?}
- - What is stable ?
- - How do you know what will work ?
- - Why are we not using studio ?
+	\begin{flushleft}
+		 - What is stable ?
+		 - How do you know what will work ?
+		 - Why are we not using studio ?
+	\end{flushleft}
 \end{frame}
 
 \section{Getting to know the Eclipse, IDE}
